@@ -33,12 +33,12 @@ const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
           exercise.target.toLowerCase().includes(search)
         );
       });
-      //   console.log(searchExercisesData);
+      console.log(searchExercisesData);
       setSearchTxt("");
       setExercise(searchExercisesData);
     }
   };
-  console.log(categories);
+  // console.log(categories);
   return (
     <Stack
       //   direction={"column"}
