@@ -5,14 +5,15 @@ import { api_Options } from "../utils/constant.js";
 import { RAPI_API_URL } from "../utils/constant.js";
 import { getCategory } from "../utils/constant.js";
 import useCategories from "../utils/useCategories.js";
+import HorizontalScrollbar from "./HorizontalScrollbar.js";
 
-const SearchExercises = () => {
+const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
   //Search Text
   const [search, setSearchTxt] = useState("");
-  const [exercise, setExercise] = useState([]);
 
   //get Ccategoriesfrom the hook
   const categories = useCategories();
+  setBodyPart(categories);
 
   //handleSearch
   const handleSearch = async () => {
@@ -125,6 +126,19 @@ const SearchExercises = () => {
         >
           Search
         </Button>
+      </Box>
+      <Box
+        sx={{
+          position: "relative",
+          width: "100%",
+          p: "20px",
+        }}
+      >
+        <HorizontalScrollbar
+          data={categories}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
+        />
       </Box>
     </Stack>
   );
