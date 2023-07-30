@@ -12,10 +12,10 @@ const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
   //Search Text
   const [search, setSearchTxt] = useState("");
   let [scroll, setScroll] = useState(0);
-
+  const [bodyParts, setBodyParts] = useState();
   //get Ccategoriesfrom the hook
   const categories = useCategories();
-  setBodyPart(categories);
+  // setBodyParts(categories);
 
   //handleSearch
   const handleSearch = async () => {

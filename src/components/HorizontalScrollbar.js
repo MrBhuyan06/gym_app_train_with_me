@@ -40,7 +40,7 @@ const HorizontalScrollbar = ({
           //   className="h-scroll"
           direction={"row"}
           key={item.id || item}
-          itemId={item.id || item}
+          itemID={item.id || item}
           tittle={item.id || item}
           m="0 40px"
         >

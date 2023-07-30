@@ -79,8 +79,8 @@ img {
   color: var(--color-bg);
 } */
 .about__cards {
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
   border-radius: 10px;
 }
 .about__cards {
@@ -140,6 +140,11 @@ img {
   width: 100%;
   padding: 20px;
   position: relative;
+}
+.body-part {
+}
+.icons {
+  font-size: 30px;
 }
 @media screen and (max-width: 500px) {
   .me {
