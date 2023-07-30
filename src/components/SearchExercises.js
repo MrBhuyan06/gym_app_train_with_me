@@ -6,10 +6,12 @@ import { RAPI_API_URL } from "../utils/constant.js";
 import { getCategory } from "../utils/constant.js";
 import useCategories from "../utils/useCategories.js";
 import HorizontalScrollbar from "./HorizontalScrollbar.js";
-
+import Left from "../assets/left-arrow.png";
+import Right from "../assets/right-arrow.png";
 const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
   //Search Text
   const [search, setSearchTxt] = useState("");
+  let [scroll, setScroll] = useState(0);
 
   //get Ccategoriesfrom the hook
   const categories = useCategories();
@@ -59,7 +61,7 @@ const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
         Awesome Exercise <br />
         Should Know
       </Typography>
-      <Box position={"relative"} mb="72px">
+      <Box position={"relative"} mb="72px" height={"76px"}>
         <TextField
           className="about__card"
           height="76px"
@@ -127,19 +129,27 @@ const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
           Search
         </Button>
       </Box>
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          p: "20px",
-        }}
-      >
+      <div className="main-category">
+        <Typography
+          onClick={() => setScroll(() => (scroll -= 300))}
+          className="right-arrow"
+        >
+          <img src={Left} alt="right-arrow" />
+        </Typography>
+        <Typography
+          onClick={() => setScroll(() => (scroll += 300))}
+          className="left-arrow"
+        >
+          <img src={Right} alt="right-arrow" />
+        </Typography>
         <HorizontalScrollbar
           data={categories}
           bodyPart={bodyPart}
           setBodyPart={setBodyPart}
+          scrollValue={scroll}
+          flag={true}
         />
-      </Box>
+      </div>
     </Stack>
   );
 };
