@@ -36,3 +36,60 @@ body {
   line-height: 1.7;
   background-image: url(/src/assets/bg-texture.png);
 }
+.btn {
+  /* width: max-content; */
+  /* display: inline-block; */
+  /* color: var(--color-primary); */
+  /* padding: 0.7rem 1.2rem; */
+  /* border-radius: 0.4rem; */
+
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+}
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 26rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 4rem 0.5rem 0.5rem 0.5rem;
+  /* position: absolute;
+  right: 100px;
+  top: 0px; */
+  /* margin-left: auto; */
+  margin-right: 150px;
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+.about__card {
+  transition: var(--transition);
+}
+/* .btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+} */
+@media screen and (max-width: 500px) {
+  .me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 26rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 4rem 0.5rem 0.5rem 0.5rem;
+    /* position: absolute;
+        right: 100px;
+        top: 0px; */
+    /* margin-left: auto; */
+    margin-right: 0;
+  }
+}
