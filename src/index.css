@@ -172,7 +172,10 @@ img {
 .exercise-card:hover {
   transform: scale(1.1, 1.1);
 }
-
+.page {
+  color: #fff;
+  font-size: 2rem;
+}
 @media screen and (max-width: 500px) {
   .me {
     background: linear-gradient(var(--color-primary), transparent);
