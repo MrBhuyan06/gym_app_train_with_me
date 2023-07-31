@@ -176,6 +176,31 @@ img {
   color: #fff;
   font-size: 2rem;
 }
+.detail-card {
+  width: 529px;
+  height: 542px;
+  background-color: var(--color-bg-varient);
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid var(--color-bg);
+  padding: 2rem;
+  transition: var(--transition);
+
+  border-top: 4px solid #4db5ff;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+}
+.detail-card:hover {
+  transform: scale(1.1, 1.1);
+}
+.detail-card img {
+  width: 100%;
+}
 @media screen and (max-width: 500px) {
   .me {
     background: linear-gradient(var(--color-primary), transparent);
@@ -191,5 +216,24 @@ img {
         top: 0px; */
     /* margin-left: auto; */
     margin-right: 0;
+  }
+  .detail-card {
+    width: 100%;
+    /* height: 542px; */
+    background-color: var(--color-bg-varient);
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px solid var(--color-bg);
+    padding: 1rem;
+    transition: var(--transition);
+
+    border-top: 4px solid #4db5ff;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* padding-bottom: 10px; */
+    transform: scale(1, 1);
   }
 }

@@ -13,6 +13,28 @@ const Exercises = ({ setExercise, exercise, bodyPart }) => {
     setCurrentPage(value);
     window.scrollTo({ top: 1800, behavior: "smooth" });
   };
+
+  //for categories data bodyPart
+  useEffect(() => {
+    const getExeceriseData = async () => {
+      let exeData = [];
+      if (bodyPart === "all") {
+        exeData = await fetchExerciseData(
+          "https://exercisedb.p.rapidapi.com/exercises",
+          api_Options
+        );
+      } else {
+        exeData = await fetchExerciseData(
+          `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
+          api_Options
+        );
+        console.log(exeData);
+      }
+      setExercise(exeData);
+    };
+    getExeceriseData();
+  }, [bodyPart]);
+
   //pagination logic
   const indexOfLastExe = currentPage * exePerPage;
   const indexOfFirstExe = indexOfLastExe - exePerPage;
