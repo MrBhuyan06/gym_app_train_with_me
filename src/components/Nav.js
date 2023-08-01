@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
-import LOGO from "../assets/Logo.png";
+// import LOGO from "../assets/Logo.png";
+import Me from "../assets/bodybg.png";
 const Nav = () => {
   return (
     <Stack
       direction={"row"}
-      justifyContent={"space-around"}
+      justifyContent={"center"}
+      alignItems={"center"}
       sx={{
         gap: {
           sm: "122px",
@@ -21,14 +23,14 @@ const Nav = () => {
       }}
     >
       <Link to="/">
-        <img
-          src={LOGO}
-          alt="logo"
-          style={{ width: "48px", height: "48px", margin: "0 20px" }}
-        />
+        <div className="logo">
+          <img src={Me} alt="" />
+        </div>
       </Link>
       <Stack
         direction={"row"}
+        // border={"1px solid red"}
+        ml={"auto"}
         gap="40px"
         fontSize={"24px"}
         alignItems={"flex-end"}

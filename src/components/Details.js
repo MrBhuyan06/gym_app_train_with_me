@@ -4,6 +4,7 @@ import BODYPART from "../assets/body-part.png";
 import EQUI from "../assets/equiment.png";
 import TARGET from "../assets/target.png";
 import { BorderBottom } from "@mui/icons-material";
+import Loader from "./Loader.js";
 
 const Details = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;

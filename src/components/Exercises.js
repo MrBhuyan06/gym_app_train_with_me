@@ -6,7 +6,7 @@ import ExerciseCard from "./ExerciseCard.js";
 
 const Exercises = ({ setExercise, exercise, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  // console.log(exercise);
+  console.log(exercise);
   const [exePerPage] = useState(6);
   //update the current page
   const paginate = (e, value) => {
@@ -38,7 +38,7 @@ const Exercises = ({ setExercise, exercise, bodyPart }) => {
   //pagination logic
   const indexOfLastExe = currentPage * exePerPage;
   const indexOfFirstExe = indexOfLastExe - exePerPage;
-  const numberCurrentExe = exercise.slice(indexOfFirstExe, indexOfLastExe);
+  const numberCurrentExe = exercise?.slice(indexOfFirstExe, indexOfLastExe);
 
   return (
     <Box id="exercises" sx={{ mt: { lg: "109px" } }} mt="50px" p="20px">

@@ -30,6 +30,7 @@ const HeroBaner = () => {
           >
             Train With Me
           </Typography>
+          <div className="line"></div>
           <Typography
             fontWeight="700"
             sx={{
@@ -41,7 +42,7 @@ const HeroBaner = () => {
             mb="20px"
             mt="20px"
           >
-            Sweat, Smile <br /> and Repeat
+            Think, Believe <br /> and Achieve
           </Typography>
           <Typography
             color="#ff2625"
