@@ -6,6 +6,7 @@ import ExerciseCard from "./ExerciseCard.js";
 
 const Exercises = ({ setExercise, exercise, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  console.log(typeof exercise);
   console.log(exercise);
   const [exePerPage] = useState(6);
   //update the current page
